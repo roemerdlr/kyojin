@@ -1,0 +1,13 @@
+#topbar{
+    background: none repeat scroll 0 0 #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 0 0;
+    border-bottom: 3px solid #FA9221;
+}
+#topbar ul{
+    margin: 5px 0 0;
+}
+#topbar .user-links .welcome{
+    padding: 10px;
+}
