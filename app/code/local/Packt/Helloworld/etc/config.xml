@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Packt_Helloworld>
-            <version>0.0.3</version>
+            <version>0.0.1</version>
         </Packt_Helloworld>
     </modules>
     <global>
@@ -64,9 +64,27 @@
                 </connection>
             </helloworld_read>
         </resources>
+        <events>
+            <helloworld_register_visit>
+                <observers>
+                    <register_visit>
+                        <type>singleton</type>
+                        <class>helloworld/observer</class>
+                        <method>registerVisit</method>
+                    </register_visit>
+                </observers>
+            </helloworld_register_visit>
+        </events>
     </global>
     <admin>
         <routers>
+            <helloworld>
+                <use>admin</use>
+                <args>
+                    <module>Packt_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
             <adminhtml>
                 <args>
                     <modules>

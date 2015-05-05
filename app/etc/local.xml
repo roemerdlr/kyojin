@@ -28,10 +28,10 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Thu, 26 Mar 2015 15:49:10 +0000]]></date>
+            <date><![CDATA[Fri, 10 Apr 2015 15:30:25 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[8889ada3aeaa8b0ab0e238a4482f8e16]]></key>
+            <key><![CDATA[9ef7c89bc032e8a3100155de4f618da3]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -43,7 +43,7 @@
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
                     <password><![CDATA[wage7205]]></password>
-                    <dbname><![CDATA[kyojin]]></dbname>
+                    <dbname><![CDATA[kyojin_dev]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
