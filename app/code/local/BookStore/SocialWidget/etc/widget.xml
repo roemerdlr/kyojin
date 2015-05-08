@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<widgets>
+    <socialwidget_icons type="socialwidget/icons">
+        <name>Social Sharing Type: Icons</name>
+        <description type="desc">Adds social sharing with Icons</description>
+    </socialwidget_icons>
+    <socialwidget_buttons type="socialwidget/buttons">
+        <name>Spcial Sharing Type: Buttons</name>
+        <description type="desc">Adds social sharing with classics Buttons</description>
+    </socialwidget_buttons>
+</widgets>
