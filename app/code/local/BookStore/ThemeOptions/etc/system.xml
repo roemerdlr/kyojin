@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<config>
+    <tabs>
+        <bookstore translate="label">
+            <label>BookStore Theme</label>
+            <sort_order>000</sort_order>
+        </bookstore>
+    </tabs>
+    <sections>
+        <bookstore translate="label">
+            <label>Theme Options</label>
+            <tab>bookstore</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <mygroup translate="label" module="themeoptions">
+                    <label>My test group title</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>01</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        
+                        <text_field translate="label">
+                            <label>Text Field</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_field>
+                        <textarea_field translate="label">
+                            <label>Textarea</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </textarea_field>
+                        <enable_disable_field translate="label">
+                            <label>Dropdown Enable/Disable</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>40</sort_order>
+                            <source_model>adminhtml/system_config_source_enabledisable
+                            </source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_disable_field> 
+                        <file translate="label comment">
+                            <label>File</label>
+                            <frontend_type>file</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media/bookstore</upload_dir>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </file>   
+                        <yes_no_field translate="label">
+                            <label>Dropdown Yes No</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </yes_no_field>
+                    </fields>
+                </mygroup>
+                <typography translate="label" module="themeoptions">
+                    <label>Typography</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>02</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <font_text translate="label">
+                            <label>Text Font: </label>
+                            <comment>Custom Source model Font</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>themeoptions/source_font</source_model>
+                        </font_text>    
+                        <font_text_size translate="label">
+                            <label>Text Font Size: </label>
+                            <comment>Custom Source Model Fontsize</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>themeoptions/source_fontsize</source_model>
+                        </font_text_size>
+                    </fields>
+                </typography>
+                <!-- HEADER GROUP -->
+                <header translate="label" module="themeoptions">
+                    <label>Header Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>02</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <topheader_enable translate="label">
+                            <label>Enable Top Header</label>
+                            <comment>Enable or Disable the top header bar</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>01</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </topheader_enable>
+                        <telephone translate="label">
+                            <label>Telephone Number: </label>
+                            <comment>Insert here the Phone number of your
+                                company, will be displayed in the top
+                                header</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>04</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <topheader_enable>1</topheader_enable>
+                            </depends>
+                        </telephone>
+                        <logo translate="label" module="themeoptions">
+                            <comment></comment>
+                            <label>Logo</label>
+                            <frontend_type>file</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_file</backend_model>
+                                <upload_dir>media/bookstore</upload_dir>
+                                <sort_order>00</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </logo>
+                    </fields>
+                </header>
+                <!-- FOOTER GROUP -->
+                <footer translate="label" module="themeoptions">
+                    <label>Social Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>03</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!-- insert the option fields here -->
+                    </fields>
+                </footer>
+            </groups>
+        </bookstore>
+    </sections>
+</config>
