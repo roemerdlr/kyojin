@@ -28,6 +28,7 @@
  */
 ?>
 <!-- Top Bar -->
+<link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
 <div id="topbar">
     <div class="container">
         <div class="row">
@@ -36,7 +37,7 @@
             </div>
             <div class="user-links col-md-4">
                 <span class="welcome pull-left">
-                    <?php echo $this->getLayout()->getBlock('header')->getWelcome() ?>
+                    <!--?php echo $this->getLayout()->getBlock('header')->getWelcome() ?-->
                 </span>
                 <ul class="list-inline pull-left">
                     <?php if ($this->helper('customer')->isLoggedIn()): ?>
@@ -62,7 +63,7 @@
 </div>   
 <!-- Main Header -->
 <div id="header">
-    <?php echo $this->getChildHtml('topbar_cmslinks') ?>
+    <!--?php echo $this->getChildHtml('topbar_cmslinks') ?-->
     <div class="container">
         <div class="row">
             <div class="logo col-md-4">

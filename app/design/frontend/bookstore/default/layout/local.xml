@@ -64,6 +64,10 @@ and open the template in the editor.
             <action method="setTemplate">
                 <template>page/2columns-left.phtml</template>
             </action>
+            <!-- define the reference block slider -->
+            <block type="core/text_list" name="slider" as="slider" translate="label">
+                <label>Slider Block</label>
+            </block>
         </reference>
         <reference name="footer">
             <block type="cms/block" name="footer-company" as="footer-company">
@@ -90,6 +94,33 @@ and open the template in the editor.
         </reference>
         <reference name="left">
             <remove name="left.newsletter"/>
+            <remove name="left.permanent.callout"/>
+            <remove name="tags_popular"/>
+            <block type="catalog/navigation" before="-" name="leftNav" as="leftNav" template="catalog/navigation/leftnav.phtml"/>
         </reference>
+        <reference name="slider">
+            <block type="cms/block" name="home-fullwidth" as="home-fullwidth">
+                <action method="setBlockId">
+                    <block_id>home-fullwidth</block_id>
+                </action>
+            </block>
+        </reference>
+        <catalog_product_view>
+            <reference name="root">
+                <action method="setTemplate">
+                    <template>page/2columns-left.phtml</template>
+                </action>
+            </reference>
+            <reference name="head">
+                <action method="addItem">
+                    <type>skin_js</type>
+                    <name>js/jquery.prettyPhoto.js</name>
+                </action>
+                <!-- Adding the prettyphoto.css -->
+                <action method="addCss">
+                    <stylesheet>css/prettyPhoto.css</stylesheet>
+                </action>
+            </reference>
+        </catalog_product_view>
     </default>
 </layout>
