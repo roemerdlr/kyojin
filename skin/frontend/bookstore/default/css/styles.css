@@ -351,3 +351,30 @@
     font-size:12px;
     color:#ccc;
 }
+/* Product List */
+.products-grid {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.products-grid li.item {
+    margin-bottom: 30px;
+}
+.products-grid .product-name {
+    font-size:14px;
+    min-height:30px;
+    margin:0;
+}
+.products-grid .panel-footer {
+    overflow:hidden;
+}
+.product-name a {
+    color:#333;
+}
+.price-box p {
+    margin:0;
+}
+.products-grid .product-image {
+    margin-bottom:10px;
+    display:block;
+}
