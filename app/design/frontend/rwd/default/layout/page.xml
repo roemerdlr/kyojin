@@ -21,7 +21,7 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 -->
@@ -142,14 +142,17 @@
                 </block>
                 <block type="page/template_links" name="footer_links2" as="footer_links2" template="page/template/links.phtml">
                     <action method="setTitle"><title>Account</title></action>
-                </block>             
+                </block>
+                <!-- This static block can be created and populated in admin. The footer_links cms block can be used as a starting point. -->
+                <!--<block type="cms/block" name="footer_social_links">
+                    <action method="setBlockId"><block_id>footer_social_links</block_id></action>
+                </block>-->
             </block>
 
             <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">
                 <label>Page Bottom</label>
                 <block type="page/html_cookieNotice" name="global_cookie_notice" as ="global_cookie_notice" template="page/html/cookienotice.phtml" before="-" />
             </block>
-            <
         </block>
 
         <block type="core/profiler" output="toHtml" name="core_profiler"/>

@@ -21,7 +21,7 @@
  *
  * @category    design
  * @package     rwd_default
- * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
@@ -248,16 +248,7 @@ Customer account pages, rendered for all tabs in dashboard
 
         </reference>
     </customer_account>
-    <customer_account>
-        <reference name="customer_account_navigation">
-            <action method="addLink" module="wishlist">
-                <name>wishlist</name>
-                <path>wishlist</path>
-                <label>My Wishlist</label>
-            </action>
-            
-        </reference>
-    </customer_account>
+
 <!--
 Customer account home dashboard layout
 -->

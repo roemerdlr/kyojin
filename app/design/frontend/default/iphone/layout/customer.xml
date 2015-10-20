@@ -21,7 +21,7 @@
  *
  * @category    design
  * @package     default_iphone
- * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 
@@ -35,14 +35,7 @@ Default layout, loads most of the pages
     <default>
         <!-- Mage_Customer -->
         <reference name="top.links">
-            <action method="addLink" translate="label title" module="customer">
-                <label>My Account</label>
-                <url helper="customer/getAccountUrl"/>
-                <title>My Account</title>
-                <prepare/>
-                <urlParams/>
-                <position>10</position>
-            </action>
+            <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
         </reference>
         <reference name="account.links">
             <action method="addLink" translate="label title before_text" module="customer"><label>Register</label><url helper="customer/getRegisterUrl" /><title>Register</title><prepare/><urlParams/><position>100</position></action>
