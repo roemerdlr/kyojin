@@ -14,4 +14,8 @@ jQuery(document).ready(function () {
     }, function () {
         jQuery(this).find('.level0.dropdown-menu').stop(true, true).fadeOut();
     });
+    jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'facebook',
+        opacity: 0.50
+    });
 });

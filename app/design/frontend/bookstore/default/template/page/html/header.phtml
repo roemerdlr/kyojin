@@ -34,6 +34,7 @@
         <div class="row">
             <div class="col-md-8">
                 <?php echo $this->getChildHtml('topbar_cmslinks') ?>
+                <?php echo Mage::getStoreConfig('bookstore/header/telephone', Mage::app()->getStore()); ?>
             </div>
             <div class="user-links col-md-4">
                 <span class="welcome pull-left">
@@ -62,18 +63,27 @@
     </div>
 </div>   
 <!-- Main Header -->
-<div id="header">
-    <!--?php echo $this->getChildHtml('topbar_cmslinks') ?-->
+<div id="header">   
     <div class="container">
         <div class="row">
-            <div class="logo col-md-4">
-                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt()
-                    ?>"><img src="<?php echo $this->getLogoSrc() ?>"
-                       alt="<?php echo $this->getLogoAlt() ?>" /></a>
+            <div class="logo col-md-4 col-sm-5">
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo
+                    $this->getLogoAlt()
+                    ?>">
+                       <?php
+                       if (Mage::getStoreConfig('bookstore/header/logo', Mage::app()->getStore())):
+                           $logourl = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bookstore/' . Mage::getStoreConfig('bookstore/header/logo', Mage::app()->getStore());
+                       else:
+                           $logourl = $this->getLogoSrc();
+                       endif;
+                       ?>
+                    <img src="<?php echo $logourl ?>" alt="<?php echo $this->getLogoAlt()
+                       ?>" class="img-responsive" />
+                </a>
             </div>
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <?php echo $this->getChildHtml('top_cart') ?>
+<?php echo $this->getChildHtml('top_cart') ?>
             </div>
         </div>
     </div>
@@ -84,7 +94,7 @@
         <div class="row">
             <div class="navbar-header">
                 <a class="navbar-brand visible-xs" href="#">
-                    <?php echo $this->__('Categories') ?>
+<?php echo $this->__('Categories') ?>
                 </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target=".navbar-main-collapse">
@@ -96,8 +106,8 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse navbar-main-collapse">
-                <?php echo $this->getChildHtml('topMenu') ?>
-                <?php echo $this->getChildHtml('topSearch') ?>
+<?php echo $this->getChildHtml('topMenu') ?>
+<?php echo $this->getChildHtml('topSearch') ?>
             </div>
         </div>
     </div>

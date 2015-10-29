@@ -15,7 +15,7 @@ and open the template in the editor.
     <sections>
         <bookstore translate="label">
             <label>Theme Options</label>
-            <tab>bookstore</tab>
+            <tab>general</tab>
             <frontend_type>text</frontend_type>
             <sort_order>1000</sort_order>
             <show_in_default>1</show_in_default>

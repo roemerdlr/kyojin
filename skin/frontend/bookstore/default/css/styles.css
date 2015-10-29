@@ -378,3 +378,11 @@
     margin-bottom:10px;
     display:block;
 }
+.element{
+    background: #CCCCCC;
+    text-align: center;
+}
+.element-a{
+    @extend .element;
+    border:1px solid red;
+}
